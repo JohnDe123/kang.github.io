@@ -1221,13 +1221,13 @@ body::-webkit-scrollbar{width:0!important;height:0!important;display:none!import
 .bio-crumb a{color:#a7c6b4;text-decoration:none}
 .bio-crumb a:hover{text-decoration:underline}
 .bio-crumb .sep{opacity:.38}
-#view-bioinfo .recent-icon,#view-bioinfo-linux .recent-icon{color:#a7c6b4}
+#view-bioinfo .recent-icon,#view-bioinfo-linux .recent-icon,#view-bioinfo-docker .recent-icon{color:#a7c6b4}
 .recent-list button.recent-card{width:100%;font:inherit;color:inherit;text-align:left;cursor:pointer}
 .recent-list button.recent-card:focus-visible{outline:2px solid #a7c6b4;outline-offset:3px}
 
 /* ===== 分类页：杂志风格文章卡片（三视图共享，:is 保证伪元素正确绑定） ===== */
-:is(#view-posts,#view-bioinfo,#view-bioinfo-linux) .recent-list{max-width:980px;margin:0 auto;display:grid;gap:22px}
-:is(#view-posts,#view-bioinfo,#view-bioinfo-linux) .recent-card{
+:is(#view-posts,#view-bioinfo,#view-bioinfo-linux,#view-bioinfo-docker) .recent-list{max-width:980px;margin:0 auto;display:grid;gap:22px}
+:is(#view-posts,#view-bioinfo,#view-bioinfo-linux,#view-bioinfo-docker) .recent-card{
   position:relative;display:flex;align-items:stretch;gap:0;
   background:rgba(255,255,255,.045)!important;
   border:1px solid rgba(167,198,180,.18)!important;
@@ -1235,83 +1235,83 @@ body::-webkit-scrollbar{width:0!important;height:0!important;display:none!import
   box-shadow:0 10px 34px rgba(0,0,0,.22)!important;
   min-height:176px;
 }
-:is(#view-posts,#view-bioinfo,#view-bioinfo-linux) .recent-card::before{
+:is(#view-posts,#view-bioinfo,#view-bioinfo-linux,#view-bioinfo-docker) .recent-card::before{
   content:'';position:absolute;left:0;top:0;bottom:0;width:4px;
   background:linear-gradient(180deg,#a7c6b4,#5f8f75);opacity:.9;z-index:2;
 }
-:is(#view-posts,#view-bioinfo,#view-bioinfo-linux) .recent-card:hover{
+:is(#view-posts,#view-bioinfo,#view-bioinfo-linux,#view-bioinfo-docker) .recent-card:hover{
   border-color:rgba(167,198,180,.46)!important;
   box-shadow:0 18px 46px rgba(0,0,0,.34)!important;
   transform:translateY(-4px)!important;
 }
 /* 左侧主题插画区 */
-:is(#view-posts,#view-bioinfo,#view-bioinfo-linux) .recent-icon{
+:is(#view-posts,#view-bioinfo,#view-bioinfo-linux,#view-bioinfo-docker) .recent-icon{
   width:152px;flex:0 0 152px;border-radius:0!important;
   border:0!important;border-right:1px solid rgba(167,198,180,.16)!important;
   background:linear-gradient(155deg,rgba(95,143,117,.30),rgba(95,143,117,.05))!important;
   position:relative;overflow:hidden;
 }
-:is(#view-posts,#view-bioinfo,#view-bioinfo-linux) .recent-card:nth-child(2) .recent-icon{
+:is(#view-posts,#view-bioinfo,#view-bioinfo-linux,#view-bioinfo-docker) .recent-card:nth-child(2) .recent-icon{
   background:linear-gradient(155deg,rgba(74,124,99,.32),rgba(74,124,99,.05))!important;
 }
-:is(#view-posts,#view-bioinfo,#view-bioinfo-linux) .recent-card:nth-child(3) .recent-icon{
+:is(#view-posts,#view-bioinfo,#view-bioinfo-linux,#view-bioinfo-docker) .recent-card:nth-child(3) .recent-icon{
   background:linear-gradient(155deg,rgba(95,143,117,.24),rgba(74,124,99,.08))!important;
 }
-:is(#view-posts,#view-bioinfo,#view-bioinfo-linux) .recent-card:nth-child(4) .recent-icon{
+:is(#view-posts,#view-bioinfo,#view-bioinfo-linux,#view-bioinfo-docker) .recent-card:nth-child(4) .recent-icon{
   background:linear-gradient(155deg,rgba(74,124,99,.34),rgba(95,143,117,.06))!important;
 }
-:is(#view-posts,#view-bioinfo,#view-bioinfo-linux) .recent-icon::after{
+:is(#view-posts,#view-bioinfo,#view-bioinfo-linux,#view-bioinfo-docker) .recent-icon::after{
   font-family:'Noto Serif SC',serif;font-size:4.8rem;font-weight:900;
   color:rgba(255,255,255,.06);line-height:1;position:absolute;left:14px;bottom:0;pointer-events:none;
 }
-:is(#view-posts,#view-bioinfo,#view-bioinfo-linux) .recent-card:nth-child(1) .recent-icon::after{content:'01'}
-:is(#view-posts,#view-bioinfo,#view-bioinfo-linux) .recent-card:nth-child(2) .recent-icon::after{content:'02'}
-:is(#view-posts,#view-bioinfo,#view-bioinfo-linux) .recent-card:nth-child(3) .recent-icon::after{content:'03'}
-:is(#view-posts,#view-bioinfo,#view-bioinfo-linux) .recent-card:nth-child(4) .recent-icon::after{content:'04'}
-:is(#view-posts,#view-bioinfo,#view-bioinfo-linux) .recent-icon svg{width:78px;height:78px;filter:drop-shadow(0 6px 16px rgba(0,0,0,.35));position:relative;z-index:1}
+:is(#view-posts,#view-bioinfo,#view-bioinfo-linux,#view-bioinfo-docker) .recent-card:nth-child(1) .recent-icon::after{content:'01'}
+:is(#view-posts,#view-bioinfo,#view-bioinfo-linux,#view-bioinfo-docker) .recent-card:nth-child(2) .recent-icon::after{content:'02'}
+:is(#view-posts,#view-bioinfo,#view-bioinfo-linux,#view-bioinfo-docker) .recent-card:nth-child(3) .recent-icon::after{content:'03'}
+:is(#view-posts,#view-bioinfo,#view-bioinfo-linux,#view-bioinfo-docker) .recent-card:nth-child(4) .recent-icon::after{content:'04'}
+:is(#view-posts,#view-bioinfo,#view-bioinfo-linux,#view-bioinfo-docker) .recent-icon svg{width:78px;height:78px;filter:drop-shadow(0 6px 16px rgba(0,0,0,.35));position:relative;z-index:1}
 /* 右侧正文排版 */
-:is(#view-posts,#view-bioinfo,#view-bioinfo-linux) .recent-body{padding:30px 88px 28px 30px;display:flex;flex-direction:column;justify-content:center}
-:is(#view-posts,#view-bioinfo,#view-bioinfo-linux) .recent-meta{gap:12px;margin-bottom:12px;color:rgba(214,236,223,.72)!important}
-:is(#view-posts,#view-bioinfo,#view-bioinfo-linux) .recent-tag{
+:is(#view-posts,#view-bioinfo,#view-bioinfo-linux,#view-bioinfo-docker) .recent-body{padding:30px 88px 28px 30px;display:flex;flex-direction:column;justify-content:center}
+:is(#view-posts,#view-bioinfo,#view-bioinfo-linux,#view-bioinfo-docker) .recent-meta{gap:12px;margin-bottom:12px;color:rgba(214,236,223,.72)!important}
+:is(#view-posts,#view-bioinfo,#view-bioinfo-linux,#view-bioinfo-docker) .recent-tag{
   background:rgba(95,143,117,.28)!important;color:#d6ecdf!important;
   border-color:rgba(167,198,180,.34)!important;letter-spacing:.08em;
   padding:3px 12px!important;border-radius:20px!important;
 }
-:is(#view-posts,#view-bioinfo,#view-bioinfo-linux) .recent-title{
+:is(#view-posts,#view-bioinfo,#view-bioinfo-linux,#view-bioinfo-docker) .recent-title{
   font-size:1.34rem!important;font-weight:800!important;
   letter-spacing:.05em!important;line-height:1.4!important;
 }
-:is(#view-posts,#view-bioinfo,#view-bioinfo-linux) .recent-desc{
+:is(#view-posts,#view-bioinfo,#view-bioinfo-linux,#view-bioinfo-docker) .recent-desc{
   font-size:.88rem!important;color:rgba(226,240,232,.66)!important;
   line-height:1.75!important;margin-top:2px;
 }
 /* 期号角标与箭头 */
-:is(#view-posts,#view-bioinfo,#view-bioinfo-linux) .recent-card::after{
+:is(#view-posts,#view-bioinfo,#view-bioinfo-linux,#view-bioinfo-docker) .recent-card::after{
   position:absolute;right:26px;top:24px;
   font-family:'JetBrains Mono',monospace;font-size:.68rem;
   letter-spacing:.14em;color:rgba(167,198,180,.45);
 }
-:is(#view-posts,#view-bioinfo,#view-bioinfo-linux) .recent-card:nth-child(1)::after{content:'ISSUE 01'}
-:is(#view-posts,#view-bioinfo,#view-bioinfo-linux) .recent-card:nth-child(2)::after{content:'ISSUE 02'}
-:is(#view-posts,#view-bioinfo,#view-bioinfo-linux) .recent-card:nth-child(3)::after{content:'ISSUE 03'}
-:is(#view-posts,#view-bioinfo,#view-bioinfo-linux) .recent-card:nth-child(4)::after{content:'ISSUE 04'}
-:is(#view-posts,#view-bioinfo,#view-bioinfo-linux) .recent-arrow{
+:is(#view-posts,#view-bioinfo,#view-bioinfo-linux,#view-bioinfo-docker) .recent-card:nth-child(1)::after{content:'ISSUE 01'}
+:is(#view-posts,#view-bioinfo,#view-bioinfo-linux,#view-bioinfo-docker) .recent-card:nth-child(2)::after{content:'ISSUE 02'}
+:is(#view-posts,#view-bioinfo,#view-bioinfo-linux,#view-bioinfo-docker) .recent-card:nth-child(3)::after{content:'ISSUE 03'}
+:is(#view-posts,#view-bioinfo,#view-bioinfo-linux,#view-bioinfo-docker) .recent-card:nth-child(4)::after{content:'ISSUE 04'}
+:is(#view-posts,#view-bioinfo,#view-bioinfo-linux,#view-bioinfo-docker) .recent-arrow{
   position:absolute;right:28px;bottom:24px;color:#a7c6b4!important;
   font-size:1.3rem!important;line-height:1;
 }
-:is(#view-posts,#view-bioinfo,#view-bioinfo-linux) .recent-card:hover .recent-arrow{transform:translateX(6px)!important}
+:is(#view-posts,#view-bioinfo,#view-bioinfo-linux,#view-bioinfo-docker) .recent-card:hover .recent-arrow{transform:translateX(6px)!important}
 @media (max-width:640px){
-  :is(#view-posts,#view-bioinfo,#view-bioinfo-linux) .recent-icon{width:96px;flex-basis:96px}
-  :is(#view-posts,#view-bioinfo,#view-bioinfo-linux) .recent-icon svg{width:56px;height:56px}
-  :is(#view-posts,#view-bioinfo,#view-bioinfo-linux) .recent-icon::after{font-size:3rem;left:8px}
-  :is(#view-posts,#view-bioinfo,#view-bioinfo-linux) .recent-body{padding:22px 20px}
-  :is(#view-posts,#view-bioinfo,#view-bioinfo-linux) .recent-title{font-size:1.12rem!important}
-  :is(#view-posts,#view-bioinfo,#view-bioinfo-linux) .recent-desc{
+  :is(#view-posts,#view-bioinfo,#view-bioinfo-linux,#view-bioinfo-docker) .recent-icon{width:96px;flex-basis:96px}
+  :is(#view-posts,#view-bioinfo,#view-bioinfo-linux,#view-bioinfo-docker) .recent-icon svg{width:56px;height:56px}
+  :is(#view-posts,#view-bioinfo,#view-bioinfo-linux,#view-bioinfo-docker) .recent-icon::after{font-size:3rem;left:8px}
+  :is(#view-posts,#view-bioinfo,#view-bioinfo-linux,#view-bioinfo-docker) .recent-body{padding:22px 20px}
+  :is(#view-posts,#view-bioinfo,#view-bioinfo-linux,#view-bioinfo-docker) .recent-title{font-size:1.12rem!important}
+  :is(#view-posts,#view-bioinfo,#view-bioinfo-linux,#view-bioinfo-docker) .recent-desc{
     font-size:.82rem!important;display:-webkit-box;-webkit-box-orient:vertical;
     -webkit-line-clamp:3;overflow:hidden;
   }
-  :is(#view-posts,#view-bioinfo,#view-bioinfo-linux) .recent-card::after{display:none}
-  :is(#view-posts,#view-bioinfo,#view-bioinfo-linux) .recent-arrow{right:18px;bottom:14px}
+  :is(#view-posts,#view-bioinfo,#view-bioinfo-linux,#view-bioinfo-docker) .recent-card::after{display:none}
+  :is(#view-posts,#view-bioinfo,#view-bioinfo-linux,#view-bioinfo-docker) .recent-arrow{right:18px;bottom:14px}
 }
 
 /* ===== 关键词云 ===== */
@@ -3802,6 +3802,28 @@ className:"meta",begin:/^[\t ]*@/,end:/(?=#)|$/,contains:[g,m,b]}]}}})()
         </div>
         <div class="recent-arrow" aria-hidden="true">→</div>
       </a>
+      <a class="recent-card" href="#/bioinfo-docker" style="animation-delay:.2s">
+        <div class="recent-icon" aria-hidden="true">
+          <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="dockerGrad" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#d3e7d9"/><stop offset="1" stop-color="#4a7c63"/>
+              </linearGradient>
+            </defs>
+            <rect x="14" y="28" width="9" height="9" rx="2" fill="none" stroke="url(#dockerGrad)" stroke-width="2.6"/>
+            <rect x="26" y="28" width="9" height="9" rx="2" fill="none" stroke="url(#dockerGrad)" stroke-width="2.6"/>
+            <rect x="38" y="28" width="9" height="9" rx="2" fill="none" stroke="url(#dockerGrad)" stroke-width="2.6"/>
+            <rect x="32" y="16" width="9" height="9" rx="2" fill="none" stroke="url(#dockerGrad)" stroke-width="2.6"/>
+            <path d="M12 46c0 3 4 5 9 5s9-2 9-5 4-5 9-5 9 2 9 5" fill="none" stroke="url(#dockerGrad)" stroke-width="2.6" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="recent-body">
+          <div class="recent-meta"><span class="recent-tag">工具</span><time>容器与环境</time></div>
+          <div class="recent-title">Docker</div>
+          <div class="recent-desc">从概念入门到 Dockerfile 构建，再到 Compose 编排——让分析环境一次构建、处处可复现。</div>
+        </div>
+        <div class="recent-arrow" aria-hidden="true">→</div>
+      </a>
     </div>
   </section>
 </div>
@@ -3816,6 +3838,19 @@ className:"meta",begin:/^[\t ]*@/,end:/(?=#)|$/,contains:[g,m,b]}]}}})()
       <p>从基础命令到文本处理三剑客，两篇入门到进阶的生信 Linux 笔记。</p>
     </div>
     <div class="recent-list" id="bioinfoLinuxList"></div>
+  </section>
+</div>
+
+<!-- ===== 生物信息学 / docker：文章列表 ===== -->
+<div class="app-view" id="view-bioinfo-docker">
+  <section class="section" style="padding-top:48px;min-height:calc(100vh - 64px)">
+    <nav class="bio-crumb" aria-label="面包屑导航"><a href="#/posts">文章分类</a><span class="sep">/</span><a href="#/bioinfo">生物信息学</a><span class="sep">/</span><span>Docker</span></nav>
+    <div class="section-head">
+      <h2>Docker <span class="hl">笔记</span></h2>
+      <div class="dv"></div>
+      <p>从入门概念到 Dockerfile 构建，再到 Compose 编排与流程可复现——三篇打通生信容器化。</p>
+    </div>
+    <div class="recent-list" id="bioinfoDockerList"></div>
   </section>
 </div>
 
@@ -9672,6 +9707,36 @@ def generate_report(params: dict) -&gt; str:
 /* ===== 博客文章数据（正文后续填充；正文为空时显示占位） ===== */
 var POSTS = [
   {
+    id: 'docker-compose-repro',
+    cat: '生物信息学',
+    grp: 'bioinfo-docker',
+    title: 'Docker Compose 与生信流程可复现',
+    date: '2026-11-22',
+    desc: '用 docker-compose.yml 一次拉起多容器流程，讲清 Compose 常用字段、Docker 与 Conda 的可复现性取舍，以及镜像分发与 digest。',
+    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="10" width="4" height="4" rx="1"/><rect x="8.5" y="10" width="4" height="4" rx="1"/><rect x="14" y="10" width="4" height="4" rx="1"/><rect x="11" y="5" width="4" height="4" rx="1"/><path d="M3 17c0 1.5 1.8 2.5 4 2.5s4-1 4-2.5 1.8-2.5 4-2.5 4 1 4 2.5"/></svg>',
+    content: "<h3>1. 为什么需要 Docker Compose</h3>\n<p>先设想一个场景：你要在一台服务器上同时跑</p>\n<p>- 一个 Nextflow 流程容器，负责调度分析任务；</p>\n<p>- 一个 MySQL 容器，存流程的运行记录；</p>\n<p>- 一个 Jupyter 容器，供你交互查看结果。</p>\n<p>如果只用 <code class=\"ac-inline\">docker run</code>，你得敲三条长长的命令，记住每个容器的网络、端口、挂载，启动顺序还不能乱。下次换台机器，再重来一遍——很容易出错。</p>\n<p>Docker Compose 把这一切写进一个 <code class=\"ac-inline\">docker-compose.yml</code> 文件：<strong>一条 <code class=\"ac-inline\">docker compose up</code> 命令，按配置把所有服务一次性拉起来</strong>。</p>\n<div class=\"ac-tip\"><strong>核心思路：</strong>把\"多个容器怎么协同\"从一堆命令变成一份<strong>声明式配置文件</strong>。这份文件同样可以进 Git，成为流程的一部分。</div>\n<h3>2. 第一个 docker-compose.yml</h3>\n<p>新建一个目录，写入 <code class=\"ac-inline\">docker-compose.yml</code>：</p>\n<div class=\"ac-code\"><div class=\"ac-bar\"><span class=\"ac-dots\"><i></i><i></i><i></i></span><span class=\"ac-lang\">yaml</span><button class=\"ac-copy\" type=\"button\">复制</button></div><pre><code>version: \"3.9\"\n\nservices:\n  # 服务一：分析用的 Nextflow 容器\n  nextflow:\n    image: nextflow/nextflow:23.10.0\n    volumes:\n      - ./data:/data\n      - ./work:/work\n    working_dir: /work\n    command: [\"nextflow\", \"-version\"]\n\n  # 服务二：交互式 Jupyter\n  jupyter:\n    image: jupyter/base-notebook:latest\n    ports:\n      - \"8888:8888\"\n    volumes:\n      - ./data:/home/jovyan/work\n    command: [\"start-notebook.sh\", \"--NotebookApp.token=''\"]</code></pre></div>\n<p>启动：</p>\n<div class=\"ac-code\"><div class=\"ac-bar\"><span class=\"ac-dots\"><i></i><i></i><i></i></span><span class=\"ac-lang\">bash</span><button class=\"ac-copy\" type=\"button\">复制</button></div><pre><code># 后台启动所有服务\ndocker compose up -d\n\n# 查看运行状态\ndocker compose ps\n\n# 查看日志\ndocker compose logs -f\n\n# 停止并清理\ndocker compose down</code></pre></div>\n<div class=\"ac-quote\"><strong>版本提示</strong>：新版 Docker 用 <code class=\"ac-inline\">docker compose</code>（空格，插件形式）；老版本用 <code class=\"ac-inline\">docker-compose</code>（连字符）。两者配置语法基本一致，本文统一用新写法。</div>\n<h3>3. Compose 常用字段详解</h3>\n<table class=\"ac-table\"><thead><tr><th>字段</th><th>作用</th><th>举例</th></tr></thead><tbody><tr><td><code class=\"ac-inline\">image</code></td><td>指定镜像</td><td><code class=\"ac-inline\">image: nextflow/nextflow:23.10.0</code></td></tr><tr><td><code class=\"ac-inline\">build</code></td><td>从 Dockerfile 构建</td><td><code class=\"ac-inline\">build: ./</code>（指向 Dockerfile 所在目录）</td></tr><tr><td><code class=\"ac-inline\">command</code></td><td>覆盖默认命令</td><td><code class=\"ac-inline\">command: [\"bwa\", \"mem\", ...]</code></td></tr><tr><td><code class=\"ac-inline\">volumes</code></td><td>挂载数据卷</td><td><code class=\"ac-inline\">- ./data:/data</code></td></tr><tr><td><code class=\"ac-inline\">ports</code></td><td>端口映射</td><td><code class=\"ac-inline\">- \"8888:8888\"</code></td></tr><tr><td><code class=\"ac-inline\">environment</code></td><td>设置环境变量</td><td><code class=\"ac-inline\">- TZ=Asia/Shanghai</code></td></tr><tr><td><code class=\"ac-inline\">working_dir</code></td><td>容器内工作目录</td><td><code class=\"ac-inline\">working_dir: /work</code></td></tr><tr><td><code class=\"ac-inline\">depends_on</code></td><td>启动顺序依赖</td><td><code class=\"ac-inline\">depends_on: [db]</code></td></tr><tr><td><code class=\"ac-inline\">restart</code></td><td>重启策略</td><td><code class=\"ac-inline\">restart: unless-stopped</code></td></tr></tbody></table>\n<p>一个\"分析 + 数据库\"的例子：</p>\n<div class=\"ac-code\"><div class=\"ac-bar\"><span class=\"ac-dots\"><i></i><i></i><i></i></span><span class=\"ac-lang\">yaml</span><button class=\"ac-copy\" type=\"button\">复制</button></div><pre><code>version: \"3.9\"\n\nservices:\n  db:\n    image: mysql:8.0\n    environment:\n      - MYSQL_ROOT_PASSWORD=example_pass\n      - MYSQL_DATABASE=flowmeta\n    volumes:\n      - db_data:/var/lib/mysql\n    restart: unless-stopped\n\n  analysis:\n    build: .                      # 用当前目录的 Dockerfile\n    depends_on:\n      - db\n    volumes:\n      - ./data:/data\n    command: [\"python\", \"pipeline.py\"]\n\nvolumes:\n  db_data:                        # 声明命名卷，数据独立于容器</code></pre></div>\n<div class=\"ac-quote\"><strong>注意</strong>：<code class=\"ac-inline\">depends_on</code> 只保证<strong>启动顺序</strong>，不保证数据库\"已经就绪\"。分析程序最好自带重试逻辑，或在启动脚本里等数据库可连再往下跑。</div>\n<h3>4. Docker 与 Conda：可复现性之争</h3>\n<p>生信领域长期有两套环境管理方案。理解各自强弱，才能在合适场景用合适的工具。</p>\n<table class=\"ac-table\"><thead><tr><th>维度</th><th>Conda</th><th>Docker</th></tr></thead><tbody><tr><td>粒度</td><td>管理软件包</td><td>封装整个操作系统环境</td></tr><tr><td>隔离性</td><td>环境级，共享内核</td><td>进程 + 文件系统级，更彻底</td></tr><tr><td>复现精度</td><td>依赖解析可能随时间漂移</td><td>镜像内容固定，复现性更强</td></tr><tr><td>上手成本</td><td>低，生信人熟悉</td><td>中等，需理解容器概念</td></tr><tr><td>跨平台</td><td>好（Linux/macOS/Windows）</td><td>镜像本身 Linux 为主</td></tr><tr><td>适合场景</td><td>日常交互分析、快速试错</td><td>流程交付、论文复现、生产部署</td></tr></tbody></table>\n<p><strong>结论不是二选一，而是分层使用</strong>：</p>\n<p>- 日常探索、装包方便 → 用 Conda（<code class=\"ac-inline\">conda create -n project python=3.9</code>）；</p>\n<p>- 流程定稿、要交给别人或投稿 → 用 Docker 固化整个环境；</p>\n<p>- 二者结合：在 Dockerfile 里基于 <code class=\"ac-inline\">continuumio/miniconda3</code>，把一个导出的 <code class=\"ac-inline\">environment.yml</code> 装进镜像。</p>\n<p>把 Conda 环境写进镜像：</p>\n<div class=\"ac-code\"><div class=\"ac-bar\"><span class=\"ac-dots\"><i></i><i></i><i></i></span><span class=\"ac-lang\">dockerfile</span><button class=\"ac-copy\" type=\"button\">复制</button></div><pre><code>FROM continuumio/miniconda3:23.10.0\n\nCOPY environment.yml /tmp/environment.yml\nRUN conda env create -f /tmp/environment.yml &amp;&amp; \\\n    conda clean -afy\n\nENV PATH=/opt/conda/envs/bio/bin:$PATH\nWORKDIR /work\nCMD [\"bash\"]</code></pre></div>\n<div class=\"ac-tip\"><strong>生信经验：</strong><code class=\"ac-inline\">environment.yml</code> 里尽量写<strong>精确版本号</strong>（<code class=\"ac-inline\">biopython=1.81</code> 而不是 <code class=\"ac-inline\">biopython</code>），并固定 <code class=\"ac-inline\">channel</code> 顺序。否则今天导出的环境，下周重建可能解析到不同版本——这也是很多人\"Conda 不可复现\"的根源，问题往往出在版本没锁死，而非工具本身。</div>\n<h3>5. 镜像的保存、加载与分发</h3>\n<p>没有私有仓库时，可以用文件的方式传递镜像：</p>\n<div class=\"ac-code\"><div class=\"ac-bar\"><span class=\"ac-dots\"><i></i><i></i><i></i></span><span class=\"ac-lang\">bash</span><button class=\"ac-copy\" type=\"button\">复制</button></div><pre><code># 把镜像保存成 tar 包\ndocker save -o my-bio_1.0.tar my-bio:1.0\n\n# 在另一台机器上加载\ndocker load -i my-bio_1.0.tar\n\n# 推送到 Docker Hub（先 docker login）\ndocker tag my-bio:1.0 &lt;用户名&gt;/my-bio:1.0\ndocker push &lt;用户名&gt;/my-bio:1.0</code></pre></div>\n<div class=\"ac-quote\"><strong>体积提醒</strong>：<code class=\"ac-inline\">docker save</code> 出来的是完整镜像层，可能是几百 MB 到几 GB。传大镜像时优先考虑私有仓库或镜像加速器，别用邮件/网盘反复传 tar 包。</div>\n<h3>6. 流程可复现的最佳实践清单</h3>\n<p>把前面三篇的经验浓缩成一份可执行的清单：</p>\n<p>1. <strong>环境写进 Dockerfile / environment.yml</strong>，和脚本一起进 Git，不靠\"我记得装过什么\"；</p>\n<p>2. <strong>所有版本锁死</strong>：基础镜像用具体标签、包用精确版本号；</p>\n<p>3. <strong>数据不进镜像</strong>：用 <code class=\"ac-inline\">-v</code> 挂载，容器只提供软件；</p>\n<p>4. <strong>流程用 Compose 编排</strong>：多容器关系写进 <code class=\"ac-inline\">docker-compose.yml</code>；</p>\n<p>5. <strong>记录镜像摘要</strong>：<code class=\"ac-inline\">docker images --digests</code> 能拿到内容寻址的 digest，比标签更精确；</p>\n<p>6. <strong>每次运行留日志</strong>：<code class=\"ac-inline\">docker logs</code> 重定向到文件，和结果一起归档；</p>\n<p>7. <strong>投稿附上游标信息</strong>：在方法部分写明镜像名、标签、digest，审稿人可精确复现。</p>\n<div class=\"ac-code\"><div class=\"ac-bar\"><span class=\"ac-dots\"><i></i><i></i><i></i></span><span class=\"ac-lang\">bash</span><button class=\"ac-copy\" type=\"button\">复制</button></div><pre><code># 查看镜像摘要（内容寻址标识，唯一且不可变）\ndocker images --digests my-bio:1.0</code></pre></div>\n<div class=\"ac-tip\"><strong>为什么 digest 比标签可靠：</strong>标签（如 <code class=\"ac-inline\">1.0</code>）是可以被重新指向别的镜像的，而 digest 是镜像内容的哈希值，内容一变 digest 就变。论文里写 <code class=\"ac-inline\">my-bio@sha256:xxxx</code> 比写 <code class=\"ac-inline\">my-bio:1.0</code> 更严谨。</div>\n<h3>7. 常见坑速查</h3>\n<table class=\"ac-table\"><thead><tr><th>现象</th><th>原因</th><th>解决</th></tr></thead><tbody><tr><td><code class=\"ac-inline\">docker compose: command not found</code></td><td>老版本 Docker 无 compose 插件</td><td>改用 <code class=\"ac-inline\">docker-compose</code>，或升级 Docker</td></tr><tr><td>容器里改了文件，宿主机看不到</td><td>没挂载对应目录</td><td>用 <code class=\"ac-inline\">-v</code> 挂载，确认路径</td></tr><tr><td><code class=\"ac-inline\">depends_on</code> 了但数据库还没就绪</td><td>启动顺序 ≠ 服务就绪</td><td>程序加重试，或用健康检查</td></tr><tr><td>镜像越构建越大</td><td><code class=\"ac-inline\">RUN</code> 拆分太多、缓存没清理</td><td>合并 <code class=\"ac-inline\">RUN</code>，同层清理，写 <code class=\"ac-inline\">.dockerignore</code></td></tr><tr><td>流程下周跑不通了</td><td>用了 <code class=\"ac-inline\">latest</code> 标签</td><td>全部改用具体版本标签或 digest</td></tr><tr><td>容器删了结果没了</td><td>结果写在容器层</td><td>结果写到挂载目录</td></tr></tbody></table>\n<div class=\"ac-end\">\n  <p><strong>小结</strong>：三篇 Docker 笔记到此形成闭环：第一篇会用镜像（pull / run / exec / cp / <code class=\"ac-inline\">-v</code>），第二篇会造镜像（Dockerfile / build / 分层缓存 / 数据卷 / 网络 / ENTRYPOINT），第三篇会编排与交付（Compose 多容器、Conda 与 Docker 的取舍、镜像分发、digest 可复现）。对生信来说，Docker 的价值不在于\"会敲几条命令\"，而在于把\"我这个环境能跑出这个结果\"变成一份可以交给任何人、任何时候都能复现的承诺。</p>\n</div>"
+  },
+  {
+    id: 'dockerfile-build',
+    cat: '生物信息学',
+    grp: 'bioinfo-docker',
+    title: 'Dockerfile 与镜像构建',
+    date: '2026-11-21',
+    desc: '从 FROM / RUN / COPY 到分层缓存与镜像瘦身，讲清如何用 Dockerfile 把自己的生信分析环境打包成可复现镜像，含数据卷与网络。',
+    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="10" width="4" height="4" rx="1"/><rect x="8.5" y="10" width="4" height="4" rx="1"/><rect x="14" y="10" width="4" height="4" rx="1"/><rect x="11" y="5" width="4" height="4" rx="1"/><path d="M3 17c0 1.5 1.8 2.5 4 2.5s4-1 4-2.5 1.8-2.5 4-2.5 4 1 4 2.5"/></svg>',
+    content: "<h3>1. 为什么需要自己构建镜像</h3>\n<p>公共镜像能解决大部分\"装软件\"的痛苦，但下面这些情况就必须自己动手：</p>\n<p>- 你要用的软件没有现成镜像，或者现成镜像的版本和你的流程对不上；</p>\n<p>- 一篇论文的方法部分写着\"用 XX 软件 v1.2.3 + 某个补丁 + Python 3.8\"，你必须精确复刻；</p>\n<p>- 你维护一套内部流程，希望任何人拉一个镜像就能得到完全一致的环境。</p>\n<p>Dockerfile 就是\"环境配方\"：一个纯文本文件，逐行写明「从哪个基础系统出发、装什么、复制什么、默认跑什么」。把它交给 Docker，就能构建出镜像。</p>\n<div class=\"ac-tip\"><strong>核心价值：</strong>Dockerfile 是<strong>可版本控制的环境</strong>。它和你的分析脚本一起放进 Git，别人 <code class=\"ac-inline\">docker build</code> 一下，得到的环境和你的一模一样——这才是生信可复现性的落地方式。</div>\n<h3>2. Dockerfile 常用指令速查</h3>\n<table class=\"ac-table\"><thead><tr><th>指令</th><th>作用</th><th>生信场景举例</th></tr></thead><tbody><tr><td><code class=\"ac-inline\">FROM</code></td><td>指定基础镜像</td><td><code class=\"ac-inline\">FROM ubuntu:22.04</code>、<code class=\"ac-inline\">FROM continuumio/miniconda3</code></td></tr><tr><td><code class=\"ac-inline\">RUN</code></td><td>构建时执行命令</td><td><code class=\"ac-inline\">apt install</code> / <code class=\"ac-inline\">pip install</code> / 编译软件</td></tr><tr><td><code class=\"ac-inline\">COPY</code></td><td>复制本地文件进镜像</td><td><code class=\"ac-inline\">COPY ./script /opt/script</code></td></tr><tr><td><code class=\"ac-inline\">ADD</code></td><td>类似 COPY，支持自动解压</td><td>一般优先用 COPY</td></tr><tr><td><code class=\"ac-inline\">WORKDIR</code></td><td>设置工作目录</td><td><code class=\"ac-inline\">WORKDIR /work</code></td></tr><tr><td><code class=\"ac-inline\">ENV</code></td><td>设置环境变量</td><td><code class=\"ac-inline\">ENV PATH=/opt/bwa:$PATH</code></td></tr><tr><td><code class=\"ac-inline\">ARG</code></td><td>构建时变量</td><td><code class=\"ac-inline\">ARG SAMTOOLS_VER=1.17</code></td></tr><tr><td><code class=\"ac-inline\">EXPOSE</code></td><td>声明端口</td><td><code class=\"ac-inline\">EXPOSE 8888</code>（Jupyter 等）</td></tr><tr><td><code class=\"ac-inline\">CMD</code></td><td>容器默认命令</td><td><code class=\"ac-inline\">CMD [\"bwa\", \"--help\"]</code></td></tr><tr><td><code class=\"ac-inline\">ENTRYPOINT</code></td><td>容器入口命令</td><td>让镜像像一条命令一样使用</td></tr></tbody></table>\n<p>一条原则：<strong>能在一个 <code class=\"ac-inline\">RUN</code> 里做完的事，就别拆成多个 <code class=\"ac-inline\">RUN</code></strong>——Docker 镜像是分层存储的，每个指令都会产生一层，层数越少、镜像越瘦。</p>\n<h3>3. 第一个 Dockerfile</h3>\n<p>新建一个空目录，写入名为 <code class=\"ac-inline\">Dockerfile</code> 的文件（没有扩展名）：</p>\n<div class=\"ac-code\"><div class=\"ac-bar\"><span class=\"ac-dots\"><i></i><i></i><i></i></span><span class=\"ac-lang\">dockerfile</span><button class=\"ac-copy\" type=\"button\">复制</button></div><pre><code>FROM ubuntu:22.04\n\n# 作者信息（可选，但推荐）\nLABEL maintainer=\"kang@example.com\"\n\n# 安装依赖并顺手清理 apt 缓存，减小镜像体积\nRUN apt-get update &amp;&amp; apt-get install -y --no-install-recommends \\\n      bwa \\\n      samtools \\\n      python3 \\\n      curl \\\n    &amp;&amp; rm -rf /var/lib/apt/lists/*\n\n# 设置工作目录\nWORKDIR /work\n\n# 容器启动后默认执行的命令\nCMD [\"bash\"]</code></pre></div>\n<p>构建镜像：</p>\n<div class=\"ac-code\"><div class=\"ac-bar\"><span class=\"ac-dots\"><i></i><i></i><i></i></span><span class=\"ac-lang\">bash</span><button class=\"ac-copy\" type=\"button\">复制</button></div><pre><code># -t 给镜像起名字和标签：名字:标签\ndocker build -t my-bio:1.0 .\n\n# 查看是否构建成功\ndocker images | grep my-bio</code></pre></div>\n<div class=\"ac-quote\"><strong>最后的点别漏</strong>：<code class=\"ac-inline\">docker build -t my-bio:1.0 .</code> 末尾的 <code class=\"ac-inline\">.</code> 是<strong>构建上下文</strong>（Dockerfile 所在目录），Docker 会把这个目录打包发给构建引擎。要复制进镜像的文件必须放在这个目录里。</div>\n<p>构建成功后跑一下验证：</p>\n<div class=\"ac-code\"><div class=\"ac-bar\"><span class=\"ac-dots\"><i></i><i></i><i></i></span><span class=\"ac-lang\">bash</span><button class=\"ac-copy\" type=\"button\">复制</button></div><pre><code>docker run --rm my-bio:1.0 bwa mem 2&gt;&amp;1 | head -5\ndocker run --rm my-bio:1.0 samtools --version | head -3</code></pre></div>\n<h3>4. 构建缓存与镜像瘦身</h3>\n<p>Docker 构建是<strong>逐层缓存</strong>的：某一层没变，后续层直接复用缓存。理解这点能显著加快构建。</p>\n<table class=\"ac-table\"><thead><tr><th>做法</th><th>原因</th></tr></thead><tbody><tr><td>把经常变动的内容放后面</td><td>前面的层命中缓存，只重建后面的层</td></tr><tr><td><code class=\"ac-inline\">RUN</code> 里装完软件顺手清理缓存</td><td>清理和安装在同一层，才真正减小体积</td></tr><tr><td>写 <code class=\"ac-inline\">.dockerignore</code></td><td>排除 big data、<code class=\"ac-inline\">.git</code>、临时文件，避免它们进入构建上下文</td></tr><tr><td>用具体版本标签</td><td><code class=\"ac-inline\">FROM ubuntu:22.04</code> 比 <code class=\"ac-inline\">FROM ubuntu:latest</code> 更可复现</td></tr></tbody></table>\n<p>一个 <code class=\"ac-inline\">.dockerignore</code> 例子：</p>\n<div class=\"ac-code\"><div class=\"ac-bar\"><span class=\"ac-dots\"><i></i><i></i><i></i></span><span class=\"ac-lang\">text</span><button class=\"ac-copy\" type=\"button\">复制</button></div><pre><code>.git\n*.fq\n*.bam\n*.vcf\ndata/\n__pycache__/</code></pre></div>\n<div class=\"ac-quote\"><strong>注意</strong>：不要在 Dockerfile 里写 <code class=\"ac-inline\">RUN rm -rf /some/path</code> 去删<strong>上一层</strong>装的东西——文件已经进入上一层镜像，删除只是在新层里打个标记，镜像体积并不会变小。正确做法是在<strong>同一个 <code class=\"ac-inline\">RUN</code></strong> 里装完就清理。</div>\n<h3>5. 数据卷：让数据走出容器</h3>\n<p>上一篇用过 <code class=\"ac-inline\">-v</code> 挂载目录，这里系统梳理。容器里的数据默认写在\"容器层\"，容器删除就没了，所以<strong>分析结果一定要放到容器外面</strong>。</p>\n<p>三种写法：</p>\n<div class=\"ac-code\"><div class=\"ac-bar\"><span class=\"ac-dots\"><i></i><i></i><i></i></span><span class=\"ac-lang\">bash</span><button class=\"ac-copy\" type=\"button\">复制</button></div><pre><code># 1）绑定挂载：把宿主机目录映射进容器（最常用）\ndocker run --rm -v /home/user/project:/work -w /work my-bio:1.0 \\\n  bwa mem ref.fa reads.fq &gt; out.sam\n\n# 2）命名卷：由 Docker 管理，适合需要长期保留的数据\ndocker volume create bio-data\ndocker run --rm -v bio-data:/work my-bio:1.0 ls /work\n\n# 3）匿名卷：临时用，容器删了卷也可能成为孤儿\ndocker run --rm -v /data my-bio:1.0 ls /data</code></pre></div>\n<div class=\"ac-quote\"><strong>生信实践铁律</strong>：原始数据、参考基因组、中间文件、结果全部放在 <code class=\"ac-inline\">-v</code> 挂载的目录里；容器只负责提供\"软件环境\"。这样容器可以随时删掉重建，数据安然无恙。</div>\n<p>查看和清理卷：</p>\n<div class=\"ac-code\"><div class=\"ac-bar\"><span class=\"ac-dots\"><i></i><i></i><i></i></span><span class=\"ac-lang\">bash</span><button class=\"ac-copy\" type=\"button\">复制</button></div><pre><code>docker volume ls                 # 列出所有卷\ndocker volume inspect bio-data   # 查看某个卷的详情\ndocker volume prune              # 清理没被使用的卷（小心，可能删掉有用数据）</code></pre></div>\n<h3>6. 容器网络与端口映射</h3>\n<p>容器默认是隔离的网络环境。需要对外提供服务（比如 Jupyter、Shiny、数据库）时，用 <code class=\"ac-inline\">-p</code> 把容器端口映射到宿主机：</p>\n<div class=\"ac-code\"><div class=\"ac-bar\"><span class=\"ac-dots\"><i></i><i></i><i></i></span><span class=\"ac-lang\">bash</span><button class=\"ac-copy\" type=\"button\">复制</button></div><pre><code># 把容器的 8888 端口映射到宿主机的 8888\ndocker run -d \\\n  -p 8888:8888 \\\n  -v $(pwd):/work \\\n  jupyter/base-notebook \\\n  jupyter notebook --ip=0.0.0.0 --no-browser</code></pre></div>\n<p>- <code class=\"ac-inline\">-d</code>：后台运行（detached）；</p>\n<p>- <code class=\"ac-inline\">-p 8888:8888</code>：宿主机端口:容器端口；</p>\n<p>- 浏览器打开 <code class=\"ac-inline\">http://localhost:8888</code> 即可访问。</p>\n<p>容器之间要互相访问时，用自定义网络：</p>\n<div class=\"ac-code\"><div class=\"ac-bar\"><span class=\"ac-dots\"><i></i><i></i><i></i></span><span class=\"ac-lang\">bash</span><button class=\"ac-copy\" type=\"button\">复制</button></div><pre><code>docker network create bio-net\ndocker run -d --network bio-net --name db mysql:8\ndocker run -it --network bio-net my-bio:1.0 bash\n# 在第二个容器里可以直接 ping db（用容器名当域名）</code></pre></div>\n<div class=\"ac-quote\"><strong>提示</strong>：如果只是让容器访问外网（拉数据、装包），默认网络通常就够；只有容器间需要固定互访时，才值得建自定义网络。</div>\n<h3>7. CMD 与 ENTRYPOINT 的区别</h3>\n<p>这两个指令都决定\"容器启动后跑什么\"，但行为不同：</p>\n<table class=\"ac-table\"><thead><tr><th>写法</th><th>效果</th></tr></thead><tbody><tr><td><code class=\"ac-inline\">CMD [\"bwa\", \"--help\"]</code></td><td>默认命令，运行时跟的参数会<strong>整个替换</strong>掉它</td></tr><tr><td><code class=\"ac-inline\">ENTRYPOINT [\"bwa\"]</code></td><td>入口固定，运行时跟的参数<strong>追加</strong>在后面</td></tr></tbody></table>\n<p>举例：如果镜像写了 <code class=\"ac-inline\">ENTRYPOINT [\"samtools\"]</code>，那么</p>\n<div class=\"ac-code\"><div class=\"ac-bar\"><span class=\"ac-dots\"><i></i><i></i><i></i></span><span class=\"ac-lang\">bash</span><button class=\"ac-copy\" type=\"button\">复制</button></div><pre><code>docker run my-samtools view -h input.bam</code></pre></div>\n<p>等价于在容器里执行 <code class=\"ac-inline\">samtools view -h input.bam</code>——镜像用起来就像一条原生命令。</p>\n<div class=\"ac-quote\"><strong>常见组合</strong>：<code class=\"ac-inline\">ENTRYPOINT</code> 定义主程序，<code class=\"ac-inline\">CMD</code> 定义默认参数。这样用户不传参数时跑默认行为，传了参数就覆盖。</div>\n<h3>8. 一个完整的生信镜像例子</h3>\n<p>把前面的知识串起来，做一个固定版本的 bwa + samtools 镜像：</p>\n<div class=\"ac-code\"><div class=\"ac-bar\"><span class=\"ac-dots\"><i></i><i></i><i></i></span><span class=\"ac-lang\">dockerfile</span><button class=\"ac-copy\" type=\"button\">复制</button></div><pre><code>FROM ubuntu:22.04\n\nARG BWA_VER=0.7.17\nARG SAMTOOLS_VER=1.17\n\nRUN apt-get update &amp;&amp; apt-get install -y --no-install-recommends \\\n      bzip2 ca-certificates make gcc perl zlib1g-dev \\\n    &amp;&amp; cd /tmp \\\n    &amp;&amp; curl -L -o bwa.tar.gz https://github.com/lh3/bwa/releases/download/v${BWA_VER}/bwa-${BWA_VER}.tar.bz2 \\\n    &amp;&amp; tar -xjf bwa.tar.gz &amp;&amp; cd bwa-${BWA_VER} &amp;&amp; make \\\n    &amp;&amp; cp bwa /usr/local/bin/ \\\n    &amp;&amp; cd /tmp &amp;&amp; rm -rf bwa.tar.gz bwa-${BWA_VER} \\\n    &amp;&amp; apt-get purge -y make gcc zlib1g-dev \\\n    &amp;&amp; apt-get autoremove -y &amp;&amp; rm -rf /var/lib/apt/lists/*\n\nWORKDIR /work\n\nENTRYPOINT [\"/bin/bash\"]</code></pre></div>\n<p>构建并用于比对：</p>\n<div class=\"ac-code\"><div class=\"ac-bar\"><span class=\"ac-dots\"><i></i><i></i><i></i></span><span class=\"ac-lang\">bash</span><button class=\"ac-copy\" type=\"button\">复制</button></div><pre><code>docker build -t bwa-samtools:0.7.17-1.17 .\n\ndocker run --rm -v $(pwd):/work -w /work bwa-samtools:0.7.17-1.17 \\\n  -c \"bwa mem ref.fa R1.fq R2.fq &gt; aln.sam &amp;&amp; \\\n      samtools view -bS aln.sam &gt; aln.bam\"</code></pre></div>\n<div class=\"ac-quote\"><strong>注意</strong>：上面的源码编译命令是示意，重点是看懂「固定版本 → 编译安装 → 清理编译依赖 → 设 WORKDIR → 挂载数据」这套套路。实际写的时候，优先查软件官方的安装说明，确认依赖和版本号。</div>\n<h3>9. 给镜像打标签与版本管理</h3>\n<p>一个镜像可以有多个标签，标签是\"给人看的别名\"：</p>\n<div class=\"ac-code\"><div class=\"ac-bar\"><span class=\"ac-dots\"><i></i><i></i><i></i></span><span class=\"ac-lang\">bash</span><button class=\"ac-copy\" type=\"button\">复制</button></div><pre><code># 给已有镜像加一个标签\ndocker tag my-bio:1.0 my-bio:latest\n\n# 按 ID 打标签\ndocker tag &lt;镜像ID&gt; registry.example.com/team/my-bio:1.0</code></pre></div>\n<div class=\"ac-quote\"><strong>强烈建议</strong>：生产或论文复现时<strong>永远用具体版本标签</strong>（如 <code class=\"ac-inline\">1.0</code>、<code class=\"ac-inline\">0.7.17-1.17</code>），不要用 <code class=\"ac-inline\">latest</code>。<code class=\"ac-inline\">latest</code> 会随着重新构建而指向不同内容，今天跑通的流程下周可能就变了。</div>\n<div class=\"ac-end\">\n  <p><strong>小结</strong>：本篇把\"用镜像\"推进到\"造镜像\"：<code class=\"ac-inline\">FROM</code> 选基础、<code class=\"ac-inline\">RUN</code> 装依赖、<code class=\"ac-inline\">COPY</code> 带脚本、<code class=\"ac-inline\">WORKDIR</code>/<code class=\"ac-inline\">ENV</code> 配环境、<code class=\"ac-inline\">CMD</code>/<code class=\"ac-inline\">ENTRYPOINT</code> 定入口；构建时利用分层缓存提速、用 <code class=\"ac-inline\">.dockerignore</code> 和同层清理给镜像瘦身；运行时用 <code class=\"ac-inline\">-v</code> 把数据留在宿主机、用 <code class=\"ac-inline\">-p</code> 暴露服务端口。至此你已经能把自己的分析环境固化成一个可复现的镜像。下一篇《Docker Compose 与生信流程可复现》会讲多容器编排，以及 Docker 与 Conda 在可复现性上的取舍。</p>\n</div>"
+  },
+  {
+    id: 'docker-intro',
+    cat: '生物信息学',
+    grp: 'bioinfo-docker',
+    title: 'Docker 入门：从概念到跑通第一个容器',
+    date: '2026-11-20',
+    desc: '讲清镜像 / 容器 / 仓库三个核心概念、Linux 下的安装与验证、pull / run / exec / cp 常用命令，以及用 -v 挂载数据跑通第一个生信例子。',
+    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="10" width="4" height="4" rx="1"/><rect x="8.5" y="10" width="4" height="4" rx="1"/><rect x="14" y="10" width="4" height="4" rx="1"/><rect x="11" y="5" width="4" height="4" rx="1"/><path d="M3 17c0 1.5 1.8 2.5 4 2.5s4-1 4-2.5 1.8-2.5 4-2.5 4 1 4 2.5"/></svg>',
+    content: "<h3>1. 为什么生信需要 Docker</h3>\n<p>先从一个真实痛点说起：你想跑一个别人发表的流程，文档写着\"需要 bwa 0.7.17、samtools 1.9、Python 3.7 加若干包\"。你在自己的机器上装，却发现系统自带的 Python 是 3.11，某个包只支持旧版，装了 A 又破坏了 B——这就是典型的<strong>依赖地狱</strong>。</p>\n<p>Docker 解决的正是这个问题。它的核心思想：</p>\n<div class=\"ac-quote\">把软件 + 运行环境的全部依赖，打包成一个\"镜像\"；运行时从镜像启动一个\"容器\"，里面就是配置好的现成环境。</div>\n<p>带来的好处：</p>\n<p>- <strong>环境一致</strong>：你跑的和别人跑的，是同一个镜像、同一套依赖，结果可复现；</p>\n<p>- <strong>不污染系统</strong>：软件装在容器里，不改动你机器上的任何东西；</p>\n<p>- <strong>开箱即用</strong>：公共镜像仓库里有大量封装好的生信软件，拉下来就能用；</p>\n<p>- <strong>轻量</strong>：容器不是完整虚拟机，启动只要几秒，开销远小于 VM。</p>\n<h3>2. 三个核心概念</h3>\n<p>入门只需要搞懂三个词：</p>\n<table class=\"ac-table\"><thead><tr><th>概念</th><th>类比</th><th>说明</th></tr></thead><tbody><tr><td>镜像（image）</td><td>安装包 / 模板</td><td>只读的软件+环境快照，放在仓库里</td></tr><tr><td>容器（container）</td><td>运行起来的程序</td><td>镜像的运行实例，有独立的文件系统和进程</td></tr><tr><td>仓库（registry）</td><td>应用商店</td><td>存放和分发镜像的地方，最常用的是 Docker Hub</td></tr></tbody></table>\n<p>一句话串起来：<strong>从仓库拉取镜像 → 用镜像启动容器 → 在容器里跑软件</strong>。</p>\n<div class=\"ac-quote\"><strong>重要认知</strong>：镜像是\"死的\"（静态文件），容器是\"活的\"（正在运行）。同一个镜像可以启动出多个互不相干的容器。</div>\n<h3>3. 第一步：安装 Docker</h3>\n<h4>Linux（以 Ubuntu 为例）</h4>\n<div class=\"ac-code\"><div class=\"ac-bar\"><span class=\"ac-dots\"><i></i><i></i><i></i></span><span class=\"ac-lang\">bash</span><button class=\"ac-copy\" type=\"button\">复制</button></div><pre><code># 卸载旧版本（如有）\nsudo apt remove docker docker-engine docker.io containerd runc\n\n# 安装依赖\nsudo apt update\nsudo apt install -y ca-certificates curl gnupg\n\n# 添加 Docker 官方 GPG 密钥与仓库\nsudo install -m 0755 -d /etc/apt/keyrings\ncurl -fsSL https://download.docker.com/linux/ubuntu/gpg | \\\n  sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg\necho \"deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] \\\nhttps://download.docker.com/linux/ubuntu $(lsb_release -cs) stable\" | \\\n  sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null\n\n# 安装 Docker Engine\nsudo apt update\nsudo apt install -y docker-ce docker-ce-cli containerd.io\n\n# 把当前用户加入 docker 组（这样不用每次 sudo）\nsudo usermod -aG docker $USER</code></pre></div>\n<div class=\"ac-quote\"><strong>注意</strong>：<code class=\"ac-inline\">usermod</code> 加组后需要<strong>退出重新登录</strong>才生效。验证：<code class=\"ac-inline\">docker info</code> 不报权限错误即可。</div>\n<h4>验证安装</h4>\n<div class=\"ac-code\"><div class=\"ac-bar\"><span class=\"ac-dots\"><i></i><i></i><i></i></span><span class=\"ac-lang\">bash</span><button class=\"ac-copy\" type=\"button\">复制</button></div><pre><code>docker --version\ndocker run hello-world</code></pre></div>\n<p>第一条显示版本号；第二条会自动拉取一个测试镜像并运行，输出 <code class=\"ac-inline\">Hello from Docker!</code> 就说明安装成功。</p>\n<div class=\"ac-quote\"><strong>国内加速</strong>：如果拉取镜像很慢或超时，需要配置国内镜像加速器（在 <code class=\"ac-inline\">/etc/docker/daemon.json</code> 里加 <code class=\"ac-inline\">registry-mirrors</code>），或改用可用的镜像源。这是国内使用 Docker 的常见第一坑。</div>\n<h3>4. 第二步：拉取并运行第一个镜像</h3>\n<p>用一个轻量的官方镜像练手：</p>\n<div class=\"ac-code\"><div class=\"ac-bar\"><span class=\"ac-dots\"><i></i><i></i><i></i></span><span class=\"ac-lang\">bash</span><button class=\"ac-copy\" type=\"button\">复制</button></div><pre><code># 拉取镜像（ubuntu 最新版）\ndocker pull ubuntu:22.04\n\n# 查看本地已有的镜像\ndocker images\n\n# 用镜像启动一个容器，并进入交互式终端\ndocker run -it ubuntu:22.04 bash</code></pre></div>\n<p>进入容器后，你会发现自己在一个干净的 Ubuntu 系统里：</p>\n<div class=\"ac-code\"><div class=\"ac-bar\"><span class=\"ac-dots\"><i></i><i></i><i></i></span><span class=\"ac-lang\">bash</span><button class=\"ac-copy\" type=\"button\">复制</button></div><pre><code>cat /etc/os-release        # 查看系统版本\nwhich python3              # 里面是干净的，什么都没装\nexit                       # 退出容器（容器随之停止）</code></pre></div>\n<p>解释一下 <code class=\"ac-inline\">docker run -it ubuntu:22.04 bash</code>：</p>\n<p>- <code class=\"ac-inline\">-i</code>：保持标准输入打开（能交互）；</p>\n<p>- <code class=\"ac-inline\">-t</code>：分配一个伪终端（有命令行界面）；</p>\n<p>- <code class=\"ac-inline\">ubuntu:22.04</code>：用哪个镜像（<code class=\"ac-inline\">名字:标签</code> 格式，标签一般是版本）；</p>\n<p>- <code class=\"ac-inline\">bash</code>：容器启动后执行的命令。</p>\n<h3>5. 最常用的命令速查</h3>\n<p><strong>镜像相关</strong></p>\n<div class=\"ac-code\"><div class=\"ac-bar\"><span class=\"ac-dots\"><i></i><i></i><i></i></span><span class=\"ac-lang\">bash</span><button class=\"ac-copy\" type=\"button\">复制</button></div><pre><code>docker pull image:tag       # 拉取镜像\ndocker images               # 列出本地镜像\ndocker rmi image:tag        # 删除本地镜像\ndocker search keyword       # 在 Docker Hub 搜索镜像</code></pre></div>\n<p><strong>容器相关</strong></p>\n<div class=\"ac-code\"><div class=\"ac-bar\"><span class=\"ac-dots\"><i></i><i></i><i></i></span><span class=\"ac-lang\">bash</span><button class=\"ac-copy\" type=\"button\">复制</button></div><pre><code>docker run image             # 创建并启动容器\ndocker run -it image bash    # 启动并进入交互终端\ndocker ps                    # 查看正在运行的容器\ndocker ps -a                 # 查看所有容器（含已停止）\ndocker stop &lt;容器ID&gt;         # 停止容器\ndocker start &lt;容器ID&gt;        # 启动已停止的容器\ndocker rm &lt;容器ID&gt;           # 删除容器\ndocker logs &lt;容器ID&gt;         # 查看容器输出日志</code></pre></div>\n<p><strong>进入正在运行的容器</strong></p>\n<div class=\"ac-code\"><div class=\"ac-bar\"><span class=\"ac-dots\"><i></i><i></i><i></i></span><span class=\"ac-lang\">bash</span><button class=\"ac-copy\" type=\"button\">复制</button></div><pre><code>docker exec -it &lt;容器ID&gt; bash   # 在运行中的容器里开一个终端</code></pre></div>\n<div class=\"ac-quote\"><strong>容器名</strong>：<code class=\"ac-inline\">docker run</code> 时用 <code class=\"ac-inline\">--name my_container</code> 可以给容器起名字，之后就能用名字代替那串 ID，方便得多。</div>\n<h3>6. 关键操作：把文件传进/传出容器</h3>\n<p>生信分析一定要处理数据文件，但容器是隔离的——容器里的文件，宿主机（你的机器）默认看不到。有两种办法：</p>\n<h4>方式一：挂载目录（推荐）</h4>\n<p>用 <code class=\"ac-inline\">-v</code> 把宿主机的目录\"映射\"进容器，两边看到同一份数据：</p>\n<div class=\"ac-code\"><div class=\"ac-bar\"><span class=\"ac-dots\"><i></i><i></i><i></i></span><span class=\"ac-lang\">bash</span><button class=\"ac-copy\" type=\"button\">复制</button></div><pre><code>docker run -it \\\n  -v /home/user/data:/data \\\n  ubuntu:22.04 bash</code></pre></div>\n<p>- <code class=\"ac-inline\">/home/user/data</code> 是宿主机路径；</p>\n<p>- <code class=\"ac-inline\">/data</code> 是容器里的路径；</p>\n<p>- 容器里往 <code class=\"ac-inline\">/data</code> 写文件，宿主机的 <code class=\"ac-inline\">data/</code> 目录里立刻能看到，反之亦然。</p>\n<div class=\"ac-quote\"><strong>生信必备写法</strong>：把原始数据、参考基因组、结果目录都挂进去，容器只负责跑软件：</div>\n<div class=\"ac-quote\"><code class=\"ac-inline\">docker run --rm -v $PWD:/work -w /work bwa bwa mem ref.fa reads.fq > out.sam</code></div>\n<div class=\"ac-quote\">其中 <code class=\"ac-inline\">-w /work</code> 指定容器内的工作目录，<code class=\"ac-inline\">--rm</code> 表示容器退出后自动删除。</div>\n<h4>方式二：拷贝文件</h4>\n<p>不挂载，也可以用 <code class=\"ac-inline\">docker cp</code> 手动传：</p>\n<div class=\"ac-code\"><div class=\"ac-bar\"><span class=\"ac-dots\"><i></i><i></i><i></i></span><span class=\"ac-lang\">bash</span><button class=\"ac-copy\" type=\"button\">复制</button></div><pre><code>docker cp local.fq &lt;容器ID&gt;:/data/        # 宿主机 → 容器\ndocker cp &lt;容器ID&gt;:/data/result.txt ./    # 容器 → 宿主机</code></pre></div>\n<div class=\"ac-quote\"><strong>实践原则</strong>：一次性小文件用 <code class=\"ac-inline\">docker cp</code> 方便；要把原始数据带进去、把结果带出来，用 <code class=\"ac-inline\">-v</code> 挂载才是正道。</div>\n<h3>7. 一个完整的生信例子</h3>\n<p>把上面的知识串起来——用一个现成的 bwa 镜像做序列比对（命令示意，重点是看懂结构）：</p>\n<div class=\"ac-code\"><div class=\"ac-bar\"><span class=\"ac-dots\"><i></i><i></i><i></i></span><span class=\"ac-lang\">bash</span><button class=\"ac-copy\" type=\"button\">复制</button></div><pre><code>docker run --rm \\\n  -v $(pwd):/work \\\n  -w /work \\\n  biocontainers/bwa:0.7.17 \\\n  bwa mem reference.fa reads_R1.fq reads_R2.fq &gt; alignment.sam</code></pre></div>\n<p>拆解：</p>\n<p>- <code class=\"ac-inline\">--rm</code>：跑完自动删除容器，不留垃圾；</p>\n<p>- <code class=\"ac-inline\">-v $(pwd):/work</code>：把当前目录挂进容器的 <code class=\"ac-inline\">/work</code>；</p>\n<p>- <code class=\"ac-inline\">-w /work</code>：容器里的工作目录设为 <code class=\"ac-inline\">/work</code>；</p>\n<p>- <code class=\"ac-inline\">biocontainers/bwa:0.7.17</code>：封装好 bwa 的镜像（来自 biocontainers，专门为生信提供）；</p>\n<p>- <code class=\"ac-inline\">bwa mem ... > alignment.sam</code>：要在容器里执行的命令，结果写到挂载目录，宿主机直接可见。</p>\n<p>这就是 Docker 在生信里的典型用法：<strong>不装软件，拉镜像，挂数据，跑命令</strong>。</p>\n<h3>8. 镜像从哪来</h3>\n<table class=\"ac-table\"><thead><tr><th>仓库</th><th>特点</th></tr></thead><tbody><tr><td>Docker Hub</td><td>最通用，官方和社区镜像多</td></tr><tr><td>Biocontainers</td><td>生信专用，数千个工具都有封装好的镜像</td></tr><tr><td>BioDocker</td><td>另一个生信镜像社区</td></tr><tr><td>自建/公司私有仓库</td><td>放自己构建的流程镜像</td></tr></tbody></table>\n<p>搜索生信镜像时，优先找 Biocontainers 这类专门社区，版本和依赖更贴合生信需求。</p>\n<h3>9. 常见问题速查</h3>\n<table class=\"ac-table\"><thead><tr><th>报错 / 现象</th><th>原因</th><th>解决</th></tr></thead><tbody><tr><td><code class=\"ac-inline\">permission denied</code> 连不上 Docker</td><td>用户不在 docker 组</td><td><code class=\"ac-inline\">sudo usermod -aG docker $USER</code> 后重新登录</td></tr><tr><td>拉镜像很慢 / 超时</td><td>未配置国内加速</td><td>配置 <code class=\"ac-inline\">registry-mirrors</code> 加速器</td></tr><tr><td><code class=\"ac-inline\">docker: command not found</code></td><td>没装 Docker</td><td>按第 3 节安装</td></tr><tr><td>容器里看不到宿主机文件</td><td>没挂载目录</td><td>用 <code class=\"ac-inline\">-v</code> 挂载，确认路径写对</td></tr><tr><td>容器退出后数据丢了</td><td>数据写在容器层</td><td>用 <code class=\"ac-inline\">-v</code> 挂载出来，别写在容器里</td></tr><tr><td>每次都要 sudo</td><td>用户组未生效</td><td>重新登录或重启</td></tr></tbody></table>\n<div class=\"ac-end\">\n  <p><strong>小结</strong>：Docker 的入门门槛其实只有\"镜像 / 容器 / 仓库\"三个概念，和一套 <code class=\"ac-inline\">pull</code>、<code class=\"ac-inline\">run</code>、<code class=\"ac-inline\">ps</code>、<code class=\"ac-inline\">exec</code>、<code class=\"ac-inline\">cp</code> 命令。对生信最重要的两个动作是：<strong>拉一个封装好软件的镜像</strong>（免去装环境的痛苦），以及<strong>用 <code class=\"ac-inline\">-v</code> 把数据挂载进容器</strong>（让容器能读你的数据、把结果写回来）。本篇只做到\"会用别人做好的镜像\"；下一篇《Docker 实战》会讲怎么用 <code class=\"ac-inline\">Dockerfile</code> 把自己的分析环境打包成镜像，以及 volume、网络这些更实用的机制。</p>\n</div>"
+  },
+  {
     id: 'nextflow-intro',
     cat: '生物信息学',
     grp: 'bioinfo-linux',
@@ -9747,6 +9812,28 @@ function renderBioinfoLinuxList(){
 }
 
 /* 点击波浪：平滑滚动到第二屏 */
+
+/* 生物信息学 / docker 分类下的文章列表 */
+function renderBioinfoDockerList(){
+  var grid=document.getElementById('bioinfoDockerList');
+  if(!grid) return;
+  var list=POSTS.filter(function(p){return p.grp==='bioinfo-docker';});
+  list.sort(function(a,b){return (b.date||'').localeCompare(a.date||'');});
+  var html='';
+  for(var i=0;i<list.length;i++){
+    var p=list[i];
+    html += '<button class="recent-card" type="button" style="animation-delay:'+(i*0.08)+'s" onclick="openPost(\''+p.id+'\')" aria-label="阅读文章：'+p.title+'">'
+      + '<div class="recent-icon" aria-hidden="true">'+p.icon+'</div>'
+      + '<div class="recent-body">'
+      + '<div class="recent-meta"><span class="recent-tag">'+p.cat+'</span><time>'+p.date+'</time></div>'
+      + '<div class="recent-title">'+p.title+'</div>'
+      + '<div class="recent-desc">'+p.desc+'</div>'
+      + '</div>'
+      + '<div class="recent-arrow" aria-hidden="true">→</div>'
+      + '</button>';
+  }
+  grid.innerHTML=html;
+}
 function scrollToLatest(){
   var el = document.getElementById('home-latest');
   if(el) el.scrollIntoView({behavior:'smooth', block:'start'});
@@ -9817,7 +9904,7 @@ function backFromPost(){
 }
 
 (function(){
-  function init(){ renderLatestPosts(); renderBioinfoLinuxList(); }
+  function init(){ renderLatestPosts(); renderBioinfoLinuxList(); renderBioinfoDockerList(); }
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', init);
   else init();
 })();
@@ -10502,6 +10589,7 @@ function drawGraph(cid,tipId,col,entries,catLabel,catDesc,gf1,gf2){var C=documen
     python:document.getElementById('view-python'),
     bioinfo:document.getElementById('view-bioinfo'),
     'bioinfo-linux':document.getElementById('view-bioinfo-linux'),
+    'bioinfo-docker':document.getElementById('view-bioinfo-docker'),
     postDetail:document.getElementById('view-postDetail')
   };
   var pills=document.querySelectorAll('[data-nav]');
@@ -10510,7 +10598,7 @@ function drawGraph(cid,tipId,col,entries,catLabel,catDesc,gf1,gf2){var C=documen
       var k=p.getAttribute('data-nav');
       var on=false;
       if(k==='home') on=(name==='home');
-      if(k==='posts') on=(name==='posts'||name==='philosophy'||name==='biology'||name==='python'||name==='bioinfo'||name==='bioinfo-linux');
+      if(k==='posts') on=(name==='posts'||name==='philosophy'||name==='biology'||name==='python'||name==='bioinfo'||name==='bioinfo-linux'||name==='bioinfo-docker');
       if(k==='tags') on=(name==='tags');
       p.classList.toggle('active',on);
     });
@@ -10554,6 +10642,7 @@ function drawGraph(cid,tipId,col,entries,catLabel,catDesc,gf1,gf2){var C=documen
     if(h==='biology'||h==='bio') return 'biology';
     if(h==='bioinfo') return 'bioinfo';
     if(h==='bioinfo-linux'||h==='bioinfo/linux'||h==='bioinfo/linux/') return 'bioinfo-linux';
+    if(h==='bioinfo-docker'||h==='bioinfo/docker'||h==='bioinfo/docker/') return 'bioinfo-docker';
     if(h==='python'||h==='py'||/^list\//.test(h)||/^post\//.test(h)||/^search\//.test(h)||/^ch\//.test(h)) return 'python';
     return 'home';
   }
@@ -10608,7 +10697,14 @@ var TAG_DATA=[
   {t:'cut',n:13,href:'#/postDetail/linux-awk'},
   {t:'进程管理',n:11,href:'#/postDetail/linux-basic-cmd'},
   {t:'sort',n:11,href:'#/postDetail/linux-awk'},
-  {t:'uniq',n:9,href:'#/postDetail/linux-awk'}
+  {t:'uniq',n:9,href:'#/postDetail/linux-awk'},
+  {t:'Docker',n:34,href:'#/bioinfo-docker'},
+  {t:'容器',n:24,href:'#/bioinfo-docker'},
+  {t:'镜像',n:21,href:'#/postDetail/docker-intro'},
+  {t:'Dockerfile',n:19,href:'#/postDetail/dockerfile-build'},
+  {t:'可复现',n:16,href:'#/postDetail/docker-compose-repro'},
+  {t:'Compose',n:13,href:'#/postDetail/docker-compose-repro'},
+  {t:'数据卷',n:11,href:'#/postDetail/dockerfile-build'}
 ];
 function renderTagCloud(){
   var box=document.getElementById('tagCloud');
