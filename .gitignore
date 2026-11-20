@@ -1,0 +1,9 @@
+# 历史备份（不上传）
+index.before-*.html
+
+# 临时脚本与 Markdown 草稿
+_merge_tmp/
+
+# WorkBuddy 本地数据
+.workbuddy/
+.wbapp_*.genie
