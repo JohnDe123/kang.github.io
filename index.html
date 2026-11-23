@@ -858,7 +858,7 @@ body::after{content:'';position:fixed;top:-50%;left:-50%;width:200%;height:200%;
    html 保留深色作为视频未加载时的兜底。 */
 html{background:#16211d!important}
 body{background:transparent!important}
-.bg-video-wrap{background:#16211d!important}
+.bg-video-wrap{background:linear-gradient(160deg,#243a30 0%,#16211d 55%,#0f1a15 100%)!important}
 .bg-video-wrap video{filter:none!important}
 .bg-overlay{
   background:
@@ -3582,10 +3582,21 @@ className:"meta",begin:/^[\t ]*@/,end:/(?=#)|$/,contains:[g,m,b]}]}}})()
 <a data-page-node-id="0iGMCAQfHM0lQP03K08LDt" class="skip-link" href="#main-content">跳到主要内容</a>
 
 <div data-page-node-id="XgtqolAfs8vrqeLPOYDatx" class="bg-video-wrap" aria-hidden="true">
-  <video data-page-node-id="kZ21ZZSByGp2BiDeY0ZKLG" autoplay="" muted="" loop="" playsinline="" preload="metadata" poster="assets/favicon.jpg" tabindex="-1" aria-hidden="true" disablepictureinpicture="">
+  <video data-page-node-id="kZ21ZZSByGp2BiDeY0ZKLG" autoplay="" muted="" loop="" playsinline="" preload="auto" tabindex="-1" aria-hidden="true" disablepictureinpicture="">
     <source data-page-node-id="iGuDtDC1otQr41OVnh9UrC" src="assets/horizon-sky-wanderer-moewalls-com.mp4" type="video/mp4">
   </video>
 </div>
+<script>
+(function(){
+  var v=document.querySelector('.bg-video-wrap video');
+  if(!v) return;
+  var tryPlay=function(){var p=v.play();if(p&&p.catch)p.catch(function(){});};
+  v.addEventListener('canplay',tryPlay,{once:true});
+  window.addEventListener('load',tryPlay);
+  document.addEventListener('DOMContentLoaded',tryPlay);
+  tryPlay();
+})();
+</script>
 <div data-page-node-id="expZZD5Ujo3CBSDjvvPen6" class="bg-overlay"></div>
 <nav data-page-node-id="d9BxdtFjYQiRTy2m9KeyTK" class="topbar" aria-label="主导航">
   <a data-page-node-id="Brm6upvL3bgF3deF7XJX3c" class="brand" href="#/" aria-label="康的博客，返回首页">
